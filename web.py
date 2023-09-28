@@ -10,7 +10,7 @@ def add_todo():
 
 st.title("Lista za kupovinu")
 #st.subheader("This is my todo app.")
-st.write("Ukucaj dole jedan po jedan artikal.")
+st.write("Ukucaj dole jedan po jedan artikal. Ako napravis gresku samo klikni na kociku pored artikla i to ce ga izbrisati.")
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
