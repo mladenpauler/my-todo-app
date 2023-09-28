@@ -20,11 +20,11 @@ st.text_input(label="Ukucaj proizvod", placeholder="Ukucaj novi proizvod...",
               on_change=add_todo, key='new_todo')
 
 for index, todo in enumerate(todos):
-    checkbox = st.checkbox(todo, key=todo)
+    checkbox = st.checkbox(todo, key=index)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
-        del st.session_state[todo]
+        del st.session_state[index]
         st.rerun()
 
 
